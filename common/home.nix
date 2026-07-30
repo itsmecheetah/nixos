@@ -1,6 +1,8 @@
-{ home, pkgs, ... }:
+{ inputs, home, pkgs, ... }:
 
 {
+    imports = [ ./nixcord.nix ];
+
     home.username = "orangecheetah";
     home.homeDirectory = "/home/orangecheetah";
     home.stateVersion = "26.05";
