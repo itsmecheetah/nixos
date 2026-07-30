@@ -8,6 +8,7 @@
 
     time.timeZone = "America/Los_Angeles";
 
+    i18n.defaultLocale = "en_US.UTF-8";
     i18n.extraLocaleSettings = {
         LC_ADDRESS = "en_US.UTF-8";
         LC_IDENTIFICATION = "en_US.UTF-8";
@@ -23,7 +24,7 @@
     services.flatpak.enable = true;
 
     # Plasma
-    services.displayManager.ssdm.enable = true;
+    services.displayManager.sddm.enable = true;
     services.desktopManager.plasma6.enable = true;
 
     services.printing.enable = true;
@@ -41,7 +42,7 @@
 
     users.users."orangecheetah" = {
         isNormalUser = true;
-        description: "orangecheetah";
+        description = "orangecheetah";
         extraGroups = [ "networkmanager" "wheel" ];
     };
 
@@ -50,9 +51,15 @@
 
     programs.firefox.enable = true;
 
+    programs.steam = {
+        enable = true;
+        extraCompatPackages = [ pkgs.proton-ge-bin ];
+    };
+
     environment.systemPackages = with pkgs; [
         pulseaudio
         mpv
+        kdePackages.kate
     ];
 
     programs.appimage = {
@@ -67,12 +74,13 @@
                 alsa-lib
                 libX11
                 libXi
-                libXao
+                libXau
             ];
         };
     };
 
     programs.dconf.enable = true;
+    programs.gamemode.enable = true;
 
     system.stateVersion = "26.05";
 }

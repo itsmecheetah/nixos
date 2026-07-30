@@ -1,4 +1,4 @@
-{ inputs, home, pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
     imports = [ ./nixcord.nix ];
@@ -8,7 +8,6 @@
     home.stateVersion = "26.05";
 
     home.packages = with pkgs; [
-        discord
         jetbrains.rider
         clang
         pkg-config
@@ -33,15 +32,11 @@
         settings = {
             display = {
                 separator = " » ";
+                color = "blue";
             };
             # Idk yet what my color palette and theme and stuff will be, so I'm just gonna wait on the rest of the config for this one
         };
     };
-
-    programs.steam = {
-        enable = true;
-        extraCompatPackages = [ proton-ge-bin ];
-    }
 
     programs = {
         vscode.enable = true;
