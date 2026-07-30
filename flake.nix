@@ -13,7 +13,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixcord, ... }@inputs: {
     packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
     packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
 
@@ -25,6 +25,12 @@
           ./common
           ./hosts/thinkpad
           home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPkgs = true;
+            home-manager.extraSpecialArgs = { inherit inputs };
+            home-manager.users.orangecheetah = import ./common/home.nix;
+          }
         ];
       };
 
@@ -34,6 +40,14 @@
         modules = [
           ./common
           ./hosts/desktop
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPkgs = true;
+            home-manager.extraSpecialArgs = { inherit inputs };
+            home-manager.users.orangecheetah = import ./common/home.nix;
+          }
+        ];
         ]
       }
     }
