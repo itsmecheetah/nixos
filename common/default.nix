@@ -1,8 +1,6 @@
 { config, pkgs, lib, ... }:
 
 {
-    imports = [ inputs.nixcord.nixModules.nixcord ];
-
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
@@ -73,6 +71,8 @@
             ];
         };
     };
+
+    programs.dconf.enable = true;
 
     system.stateVersion = "26.05";
 }
