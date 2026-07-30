@@ -17,28 +17,28 @@
         mono
         prismlauncher
     ];
-
-    programs.git = {
-        enable = true;
-        userName = "itsmecheetah";
-        userEmail = "enzoljost@gmail.com";
-        extraConfig = {
-            credential.helper = "${pkgs.git-credential-manager}/bin/git-credential-manager";
-        };
-    };
-
-    programs.fastfetch = {
-        enable = true;
-        settings = {
-            display = {
-                separator = " » ";
-                color = "blue";
-            };
-            # Idk yet what my color palette and theme and stuff will be, so I'm just gonna wait on the rest of the config for this one
-        };
-    };
-
     programs = {
+        git = {
+            enable = true;
+            userName = "itsmecheetah";
+            userEmail = "enzoljost@gmail.com";
+            extraConfig = {
+                credential.helper = "${pkgs.git-credential-manager}/bin/git-credential-manager";
+                credential.credentialStore = "secretservice";
+            };
+        };
+
+        fastfetch = {
+            enable = true;
+            settings = {
+                display = {
+                    separator = " » ";
+                    color = "blue";
+                };
+                # Idk yet what my color palette and theme and stuff will be, so I'm just gonna wait on the rest of the config for this one
+            };
+        };
+
         vscode.enable = true;
         obs-studio.enable = true;
     };
