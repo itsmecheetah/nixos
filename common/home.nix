@@ -1,11 +1,15 @@
 { inputs, pkgs, ... }:
 
 {
-    imports = [ ./nixcord.nix ];
+    imports = [
+    ./nixcord.nix
+    ./hyprland.nix
+    ];
 
     home.username = "orangecheetah";
     home.homeDirectory = "/home/orangecheetah";
     home.stateVersion = "26.05";
+    home.sessionVariables.NIXOS_OZONE_WL = "1";
 
     home.packages = with pkgs; [
         jetbrains.rider
@@ -17,6 +21,19 @@
         mono
         prismlauncher
     ];
+
+    services.dunst = {
+        enable = true;
+        #ok yes theres nothing else in here rn but ill add settings later dw
+    };
+    services.hyprpolkitagent.enable = true;
+
+    wayland.windowManager.hyprland = {
+        enable = true;
+        package = null;
+        portalPackage = null;
+    };
+
     programs = {
         git = {
             enable = true;
@@ -30,16 +47,11 @@
 
         fastfetch = {
             enable = true;
-            settings = {
-                display = {
-                    separator = " » ";
-                    color = "blue";
-                };
-                # Idk yet what my color palette and theme and stuff will be, so I'm just gonna wait on the rest of the config for this one
-            };
+            # Add more stuff later
         };
 
         vscode.enable = true;
         obs-studio.enable = true;
+        kitty.enable = true;
     };
 }

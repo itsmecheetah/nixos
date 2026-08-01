@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+ { config, pkgs, lib, ... }:
 
 {
     boot.loader.systemd-boot.enable = true;
@@ -24,23 +24,27 @@
     services.flatpak.enable = true;
 
     # Plasma
-    services.displayManager.sddm.enable = true;
-    services.desktopManager.plasma6.enable = true;
+    # services.displayManager.sddm.enable = true;
+    # services.desktopManager.plasma6.enable = true;
+
+    programs.hyprland = {
+        enable = true;
+        xwayland.enable = true;
+    };
 
     services.gnome.gnome-keyring.enable = true;
     security.pam.services.sddm.enableGnomeKeyring = true;
 
     services.printing.enable = true;
 
-    # Audio
     services.pulseaudio.enable = false;
     security.rtkit.enable = true;
     services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    #jack.enable = true;
+        enable = true;
+        alsa.enable = true;
+        alsa.support32Bit = true;
+        pulse.enable = true;
+        #jack.enable = true;
     };
 
     users.users."orangecheetah" = {
@@ -63,6 +67,11 @@
         pulseaudio
         mpv
         kdePackages.kate
+        egl-wayland
+        qt5.qtwayland
+        qt6.qtwayland
+        noto-fonts
+        waybar
     ];
 
     programs.appimage = {
