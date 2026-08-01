@@ -1,5 +1,6 @@
 hl.workspace_rule({
-    workspace = "name:home",
+    workspace = "1",
+    name = "home",
     layout = "scrolling",
     default = true,
     layout_opts = {
@@ -10,15 +11,17 @@ hl.workspace_rule({
 })
 
 hl.workspace_rule({
-    workspace = "name:dwindle",
-    layout = "dwindle"
+    workspace = "2",
+    name = "dwindle",
+    layout = "dwindle",
     layout_opts = {
         preserve_split = true,
     }
 })
 
 hl.workspace_rule({
-    workspace = "name:dev",
+    workspace = "3",
+    name = "dev",
     layout = "master",
     layout_opts = {
         new_status = "inherit",
@@ -26,12 +29,14 @@ hl.workspace_rule({
 })
 
 hl.workspace_rule({
-    workspace = "name:monacle",
+    workspace = "4",
+    name = "monacle",
     layout = "monacle",
 })
 
 hl.workspace_rule({
-    workspace = "name:games",
+    workspace = "5",
+    name = "games",
     no_border = true,
     no_rounding = true,
 })
@@ -40,7 +45,7 @@ hl.workspace_rule({
 -- Specifically probably another one for browsing, Unity, Jetbrains, (although those 2 might just be monacle I'm not sure).
 -- For now I'm gonna not define TOO many and I'm just gonna see what I need later down the road.
 
-h1.window_rule({
+hl.window_rule({
     name = "games-makeFullscreen",
     match = { content = "game" },
     fullscreen = true,
