@@ -50,7 +50,18 @@
             # Add more stuff later
         };
 
-        vscode.enable = true;
+        vscode = {
+	    enable = true;
+	    package = pkgs.vscodium;
+	    userSettings = {
+		"zenMode.restore" = true;
+		"zenMode.fullScreen" = false;
+		"zenMode.hideActivityBar" = true;
+		"zenMode.hideStatusBar" = true;
+		"zenMode.hideTabs" = true;
+		"zenMode.centerLayout" = false;
+	};
+
         obs-studio.enable = true;
         kitty = {
 	    enable = true;
