@@ -60,6 +60,7 @@
 		"zenMode.hideStatusBar" = true;
 		"zenMode.hideTabs" = true;
 		"zenMode.centerLayout" = false;
+	    };
 	};
 
         obs-studio.enable = true;
