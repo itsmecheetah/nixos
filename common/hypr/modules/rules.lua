@@ -46,6 +46,17 @@ hl.workspace_rule({
     no_rounding = true,
 })
 
+hl.workspace_rule({
+    workspace = "special:1",
+    persistent = true,
+    layout = "scrolling",
+    layout_opts = {
+	column_width = "0.9",
+	focus_fit_method = "0",
+	direction = "right",
+    }
+})
+
 -- I will probably need more workspaces later. 
 -- Specifically probably another one for browsing, Unity, Jetbrains, (although those 2 might just be monacle I'm not sure).
 -- For now I'm gonna not define TOO many and I'm just gonna see what I need later down the road.
