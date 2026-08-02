@@ -96,7 +96,7 @@
 	nyancat
 	unimatrix
 	home-manager
-        waybar
+        btop
     ];
 
     programs.appimage = {
