@@ -1,8 +1,9 @@
 hl.workspace_rule({
     workspace = "1",
-    name = "home",
+    default_name = "home",
     layout = "scrolling",
     default = true,
+    persistent = true,
     layout_opts = {
         column_width = "0.9",
         focus_fit_method = "0",
@@ -12,7 +13,8 @@ hl.workspace_rule({
 
 hl.workspace_rule({
     workspace = "2",
-    name = "dwindle",
+    default_name = "dwindle",
+    persistent = true,
     layout = "dwindle",
     layout_opts = {
         preserve_split = true,
@@ -21,7 +23,8 @@ hl.workspace_rule({
 
 hl.workspace_rule({
     workspace = "3",
-    name = "dev",
+    default_name = "dev",
+    persistent = true,
     layout = "master",
     layout_opts = {
         new_status = "inherit",
@@ -30,13 +33,15 @@ hl.workspace_rule({
 
 hl.workspace_rule({
     workspace = "4",
-    name = "monacle",
+    default_name = "monacle",
+    persistent = true,
     layout = "monacle",
 })
 
 hl.workspace_rule({
     workspace = "5",
-    name = "games",
+    default_name = "games",
+    persistent = true,
     no_border = true,
     no_rounding = true,
 })

@@ -52,6 +52,9 @@
 
         vscode.enable = true;
         obs-studio.enable = true;
-        kitty.enable = true;
+        kitty = {
+	    enable = true;
+	    settings = { confirm_os_window_close = 0; };
+	};
     };
 }

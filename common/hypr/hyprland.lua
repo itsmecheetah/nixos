@@ -1,9 +1,4 @@
 -- hiiiiiiiiiii!!!!
-require("modules.rules")
-require("modules.input")
-require("modules.env")
-require("modules.binds")
-
 ---- MONITOR ----
 hl.monitor({
     output = "",
@@ -67,3 +62,9 @@ hl.config({
         disable_hyprland_logo = false, -- i will probably make this true later once I have my own theme ideas and shit
     }
 })
+
+require("modules.rules")
+require("modules.input")
+require("modules.env")
+require("modules.binds")
+
