@@ -76,6 +76,15 @@
         extraCompatPackages = [ pkgs.proton-ge-bin ];
     };
 
+    xdg.portal = {
+	enable = true;
+	extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+	config = {
+	     common.default = [ "hyprland" "gtk" ];
+	     hyprland.default = [ "hyprland" "gtk" ];
+	};
+    };
+
     environment.systemPackages = with pkgs; [
         pulseaudio
         mpv
