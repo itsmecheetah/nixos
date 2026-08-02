@@ -93,6 +93,8 @@
         qt5.qtwayland
         qt6.qtwayland
         noto-fonts
+	unimatrix
+	home-manager
         waybar
     ];
 

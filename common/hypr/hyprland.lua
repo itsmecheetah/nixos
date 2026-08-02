@@ -13,9 +13,9 @@ local fileManager = "dolphin"
 local menu = "hyprlauncher"
 
 ---- AUTOSTART ----
-hl.on("hyprland.start", function()
-    hl.exec_cmd(waybar)
-end)
+--hl.on("hyprland.start", function()
+    
+--end)
 
 ---- heyy goodlookin' (and, like, other config too ig) ----
 hl.config({
@@ -51,6 +51,7 @@ hl.config({
     },
     animations = {
         enabled = true,
+	workspace_wraparound = true,
     },
 })
 
@@ -67,4 +68,4 @@ require("modules.rules")
 require("modules.input")
 require("modules.env")
 require("modules.binds")
-
+require("modules.animations")
