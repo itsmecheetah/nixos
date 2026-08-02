@@ -60,8 +60,8 @@ hl.config({
         rounding = 10,
         rounding_power = 2,
 
-        active_opacity = 0.8,
-        inactive_opacity = 0.8,
+	active_opacity = 0.85,
+	inactive_opacity = 0.85,
 
         shadow = {
             enabled = true,
@@ -72,8 +72,8 @@ hl.config({
 
         blur = {
             enabled = true,
-            size = 3,
-            passes = 2,
+            size = 2,
+            passes = 4,
             vibrancy = 0.1696,
 	    xray = true,
         },

@@ -67,3 +67,5 @@ hl.window_rule({
     fullscreen = true,
     immediate = true,
 })
+
+
