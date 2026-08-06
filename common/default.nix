@@ -5,6 +5,8 @@
     boot.loader.efi.canTouchEfiVariables = true;
 
     networking.networkmanager.enable = true;
+    networking.nftables.enable = true;
+    networking.firewall.allowedTCPPorts = [ 22 ];
 
     time.timeZone = "America/Los_Angeles";
 
@@ -50,6 +52,8 @@
 
     services.printing.enable = true;
 
+    services.openssh.enable = true;
+
     services.pulseaudio.enable = false;
     security.rtkit.enable = true;
     services.pipewire = {
@@ -76,6 +80,8 @@
         extraCompatPackages = [ pkgs.proton-ge-bin ];
     };
 
+    programs.gamescope.enable = true;
+
     xdg.portal = {
 	enable = true;
 	extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
@@ -87,16 +93,24 @@
 
     environment.systemPackages = with pkgs; [
         pulseaudio
+	dunst
         mpv
-        kdePackages.kate
+	rustPlatform.rustLibSrc
+        rustup
+	rustc
         egl-wayland
         qt5.qtwayland
         qt6.qtwayland
         noto-fonts
-	nyancat
 	unimatrix
 	home-manager
         btop
+	cursor-clip
+	unzip
+    ];
+
+    fonts.packages = with pkgs; [
+	nerd-fonts.anonymice
     ];
 
     programs.appimage = {

@@ -13,7 +13,8 @@
 
     home.packages = with pkgs; [
         jetbrains.rider
-        clang
+        jetbrains.rust-rover
+	clang
         pkg-config
         unityhub
         git-credential-manager
@@ -56,7 +57,14 @@
         obs-studio.enable = true;
         kitty = {
 	    enable = true;
+	    shellIntegration.enableFishIntegration = true;
 	    settings = { confirm_os_window_close = 0; };
+	};
+	
+	fish.enable = true;
+
+	starship = {
+	    enable = true;
 	};
     };
 }

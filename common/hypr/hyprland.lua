@@ -16,6 +16,7 @@ local menu = "hyprlauncher"
 hl.on("hyprland.start", function()
     -- System
     hl.exec_cmd("dunst")
+    hl.exec_cmd("sleep 1 && hyprctl reload")
 
     -- Special
     hl.exec_cmd("discord", { workspace = "special:1 silent" })
@@ -24,7 +25,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("btop", { workspace = "special:2 silent" })
 
     -- Home
-    hl.exec_cmd(terminal .. " -e sh -c 'fastfetch; exec sh'", { float = true, size = { 800, 600 }, center = true })
+    hl.exec_cmd(terminal .. " -e sh -c 'fastfetch; exec sh'", { float = true, size = { 1000, 800 }, center = true })
 
     -- Dwindle
     hl.exec_cmd(terminal .. " -e unimatrix", { workspace = "2 silent" })
@@ -72,7 +73,7 @@ hl.config({
 
         blur = {
             enabled = true,
-            size = 2,
+            size = 3,
             passes = 4,
             vibrancy = 0.1696,
 	    xray = true,
@@ -81,6 +82,9 @@ hl.config({
     animations = {
         enabled = true,
 	workspace_wraparound = true,
+    },
+    cursor = {
+	no_warps = true,
     },
 })
 
