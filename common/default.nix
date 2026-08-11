@@ -109,6 +109,11 @@
 	unzip
     ];
 
+    environment.variables = {
+	EDITOR = "neovide";
+	VISUAL = "neovide";
+    };
+
     fonts.packages = with pkgs; [
 	nerd-fonts.anonymice
     ];
