@@ -63,6 +63,9 @@ hl.config({
 
 	active_opacity = 0.85,
 	inactive_opacity = 0.85,
+	--active_opacity = 1,
+	--inactive_opacity = 1,
+
 
         shadow = {
             enabled = true,
@@ -74,7 +77,7 @@ hl.config({
         blur = {
             enabled = true,
             size = 3,
-            passes = 4,
+            passes = 3,
             vibrancy = 0.1696,
 	    xray = true,
         },
@@ -85,6 +88,7 @@ hl.config({
     },
     cursor = {
 	no_warps = true,
+	no_hardware_cursors = true,
     },
 })
 

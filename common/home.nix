@@ -28,6 +28,7 @@
         #ok yes theres nothing else in here rn but ill add settings later dw
     };
     services.hyprpolkitagent.enable = true;
+    services.awww.enable = true;
 
     wayland.windowManager.hyprland = {
         enable = true;
