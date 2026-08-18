@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ config, inputs, pkgs, ... }:
 
 {
     imports = [
@@ -35,6 +35,10 @@
         package = null;
         portalPackage = null;
     };
+
+    xdg.configFile."quickshell/snowdrop".source = 
+	config.lib.file.mkOutOfStoreSymlink
+	    "${config.home.homeDirectory}/.nix/common/snowdrop";
 
     programs = {
         git = {
