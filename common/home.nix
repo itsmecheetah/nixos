@@ -67,5 +67,7 @@
 	starship = {
 	    enable = true;
 	};
+
+	quickshell.enable = true;
     };
 }

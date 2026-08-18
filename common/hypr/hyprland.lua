@@ -17,11 +17,10 @@ hl.on("hyprland.start", function()
     -- System
     hl.exec_cmd("dunst")
     hl.exec_cmd("sleep 1 && hyprctl reload")
+    hl.exec_cmd("awww-daemon")
 
     -- Special
-    hl.exec_cmd("discord", { workspace = "special:1 silent" })
-    hl.exec_cmd("firefox", { workspace = "special:1 silent" })
-    
+    hl.exec_cmd("discord", { workspace = "special:1 silent" })    
     hl.exec_cmd("btop", { workspace = "special:2 silent" })
 
     -- Home
@@ -35,15 +34,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("neovide", { workspace = "3 silent" })
     hl.exec_cmd(terminal, { workspace = "3 silent" })
     hl.exec_cmd("firefox", { workspace = "3 silent" })
-
-    -- Monacle
-    -- (I'm pretty sure monacle is supposed to be just one window or something
-    -- so something's clearly not working but that's a problem for later bcs I
-    -- haven't even used this workspace yet lmaooo)
-    hl.exec_cmd(terminal, { workspace = "5 silent" })
-
-    -- Games
-    hl.exec_cmd("steam", { workspace = "5 silent" })
 end)
 
 ---- heyy goodlookin' (and, like, other config too ig) ----
@@ -61,10 +51,10 @@ hl.config({
         rounding = 10,
         rounding_power = 2,
 
-	active_opacity = 0.85,
-	inactive_opacity = 0.85,
-	--active_opacity = 1,
-	--inactive_opacity = 1,
+	--active_opacity = 0.85,
+	--inactive_opacity = 0.85,
+	active_opacity = 1,
+	inactive_opacity = 1,
 
 
         shadow = {

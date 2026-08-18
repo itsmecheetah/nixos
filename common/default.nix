@@ -107,6 +107,8 @@
         btop
 	cursor-clip
 	unzip
+	ungoogled-chromium
+	lunar-client
     ];
 
     environment.variables = {
