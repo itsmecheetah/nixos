@@ -1,0 +1,3 @@
+[submodule "common/snowdrop"]
+	path = common/snowdrop
+	url = https://www.github.com/itsmecheetah/snowdrop
