@@ -4,7 +4,7 @@ local m = "SUPER"
 
 -- obviously these arent what they should be but im testing a fix for smt :)
 hl.bind(m .. " + space",        hl.dsp.exec_cmd("hyprlauncher"))
-hl.bind(m .. " + T",            hl.dsp.exec_cmd("kitty"))
+hl.bind(m .. " + T",            hl.dsp.exec_cmd("kitty fish"))
 hl.bind(m .. " + E",            hl.dsp.exec_cmd("dolphin"))
   
 hl.bind(m .. " + W",            hl.dsp.focus({ direction = "up" }))
@@ -36,6 +36,7 @@ hl.bind(m .. " + mouse:273",    hl.dsp.window.resize(), { mouse = true })
 hl.bind(m .. " + F",            hl.dsp.window.float({ action = "toggle" }))
 hl.bind(m .. " + Q",            hl.dsp.window.close())
 
+hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f `'))
 
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"), { locked = true, repeating = true })

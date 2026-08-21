@@ -57,6 +57,12 @@ hl.workspace_rule({
     }
 })
 
+hl.workspace_rule({
+    workspace = "special:2",
+		persistent = true,
+		layout = "dwindle"
+		})
+
 -- I will probably need more workspaces later. 
 -- Specifically probably another one for browsing, Unity, Jetbrains, (although those 2 might just be monacle I'm not sure).
 -- For now I'm gonna not define TOO many and I'm just gonna see what I need later down the road.

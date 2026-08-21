@@ -70,7 +70,10 @@
 
 	starship = {
 	    enable = true;
-	};
+			settings = {
+				format = "$directory$git_branch$git_status\n$character";
+      };
+  };
 
 	quickshell.enable = true;
     };

@@ -109,6 +109,8 @@
 	unzip
 	ungoogled-chromium
 	lunar-client
+	grim
+	slurp
     ];
 
     environment.variables = {
