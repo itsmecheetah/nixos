@@ -111,6 +111,7 @@
 	lunar-client
 	grim
 	slurp
+	davinci-resolve
     ];
 
     environment.variables = {
