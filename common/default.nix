@@ -112,6 +112,7 @@
 	grim
 	slurp
 	davinci-resolve
+	libnotify
     ];
 
     environment.variables = {
