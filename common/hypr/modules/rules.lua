@@ -33,9 +33,9 @@ hl.workspace_rule({
 
 hl.workspace_rule({
     workspace = "4",
-    default_name = "monacle",
+    default_name = "monocle",
     persistent = true,
-    layout = "monacle",
+    layout = "monocle",
 })
 
 hl.workspace_rule({

@@ -113,7 +113,10 @@
 	slurp
 	davinci-resolve
 	libnotify
+	fsel
     ];
+
+		virtualisation.virtualbox.host.enable = true;
 
     environment.variables = {
 	EDITOR = "neovide";
