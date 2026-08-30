@@ -18,6 +18,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("dunst")
     hl.exec_cmd("sleep 1 && hyprctl reload")
     hl.exec_cmd("awww-daemon")
+    hl.exec_cmd("qs -c snowdrop")
 
     -- Special
     hl.exec_cmd("discord", { workspace = "special:1 silent" })    
