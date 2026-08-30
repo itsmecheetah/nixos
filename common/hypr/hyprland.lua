@@ -65,6 +65,7 @@ hl.config({
         },
 
         blur = {
+				    popups = true,
             enabled = true,
             size = 3,
             passes = 3,
