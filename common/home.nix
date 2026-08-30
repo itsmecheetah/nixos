@@ -66,7 +66,28 @@
 	    settings = { confirm_os_window_close = 0; };
 	};
 	
-	fish.enable = true;
+	fish = {
+      enable = true;
+			shellAbbrs = {
+			    l = "fsel -p";
+					rd = "sudo nixos-rebuild --flake ~/.nix#desktop";
+					ff = "fastfetch";
+
+					cdsnowdrop = "cd ~/.nix/common/snowdrop && git status";
+					cdhypr = "cd ~/.nix/common/hypr && git status";
+					cdnix = "cd ~/.nix && git status";
+
+					gs = "git status";
+					gaa = "git add .";
+					ga = "git add";
+					gps = "git push";
+					gpl = "git pull";
+					gc = "git commit";
+
+					bye = "shutdown now";
+					brb = "systemctl suspend";
+					};
+  };
 
 	starship = {
 	    enable = true;
