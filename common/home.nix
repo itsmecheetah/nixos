@@ -63,7 +63,10 @@
         kitty = {
 	    enable = true;
 	    shellIntegration.enableFishIntegration = true;
-	    settings = { confirm_os_window_close = 0; };
+	    settings = { 
+	        confirm_os_window_close = 0; 
+		background_opacity = 0.80;
+		};
 	};
 	
 	fish = {
@@ -71,6 +74,7 @@
 			shellAbbrs = {
 			    l = "fsel -p";
 					rd = "sudo nixos-rebuild --flake ~/.nix#desktop";
+					rds = "sudo nixos-rebuild --flake ~/.nix#desktop switch";
 					ff = "fastfetch";
 
 					cdsnowdrop = "cd ~/.nix/common/snowdrop && git status";
