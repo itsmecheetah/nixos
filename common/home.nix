@@ -83,9 +83,10 @@
 					gps = "git push";
 					gpl = "git pull";
 					gc = "git commit";
+					gd = "git diff";
 
 					bye = "shutdown now";
-					brb = "systemctl suspend";
+					z = "systemctl suspend";
 					};
   };
 
