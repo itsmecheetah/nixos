@@ -32,7 +32,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd(terminal, { workspace = "2 silent" })
 
     -- Dev
-    hl.exec_cmd("neovide", { workspace = "3 silent" })
+    hl.exec_cmd("nvim", { workspace = "3 silent" })
     hl.exec_cmd(terminal, { workspace = "3 silent" })
     hl.exec_cmd("firefox", { workspace = "3 silent" })
 end)

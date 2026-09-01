@@ -57,7 +57,6 @@
         };
 
 	neovim.enable = true;
-	neovide.enable = true;
 
         obs-studio.enable = true;
         kitty = {
@@ -66,6 +65,7 @@
 	    settings = { 
 	        confirm_os_window_close = 0; 
 		background_opacity = 0.80;
+		cursor_trail = 15;
 		};
 	};
 	
