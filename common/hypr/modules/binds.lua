@@ -6,7 +6,7 @@ local m = "SUPER"
 hl.bind(m .. " + space",        hl.dsp.exec_cmd("fsel"))
 hl.bind(m .. " + T",            hl.dsp.exec_cmd("kitty fish"))
 hl.bind(m .. " + E",            hl.dsp.exec_cmd("dolphin"))
-hl.bind(m .. " + V",            hl.dsp.exec_cmd("nvim"))
+hl.bind(m .. " + V",            hl.dsp.exec_cmd("kitty nvim"))
   
 hl.bind(m .. " + W",            hl.dsp.focus({ direction = "up" }))
 hl.bind(m .. " + A",            hl.dsp.focus({ direction = "left" }))
