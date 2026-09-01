@@ -64,7 +64,7 @@
 	    shellIntegration.enableFishIntegration = true;
 	    settings = { 
 	        confirm_os_window_close = 0; 
-		background_opacity = 0.80;
+		background = "#14161B";
 		cursor_trail = 15;
 		};
 	};
@@ -76,6 +76,7 @@
 					rd = "sudo nixos-rebuild --flake ~/.nix#desktop";
 					rds = "sudo nixos-rebuild --flake ~/.nix#desktop switch";
 					ff = "fastfetch";
+					v = "nvim";
 
 					cdsnowdrop = "cd ~/.nix/common/snowdrop && git status";
 					cdhypr = "cd ~/.nix/common/hypr && git status";
