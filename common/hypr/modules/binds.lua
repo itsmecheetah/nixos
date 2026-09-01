@@ -3,7 +3,7 @@
 local m = "SUPER"
 
 -- obviously these arent what they should be but im testing a fix for smt :)
-hl.bind(m .. " + space",        hl.dsp.exec_cmd("fsel"))
+hl.bind(m .. " + space",        hl.dsp.exec_cmd("kitty fsel"))
 hl.bind(m .. " + T",            hl.dsp.exec_cmd("kitty fish"))
 hl.bind(m .. " + E",            hl.dsp.exec_cmd("dolphin"))
 hl.bind(m .. " + V",            hl.dsp.exec_cmd("kitty nvim"))
