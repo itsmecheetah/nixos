@@ -3,11 +3,10 @@
 local m = "SUPER"
 
 -- obviously these arent what they should be but im testing a fix for smt :)
-hl.bind(m .. " + space",        hl.dsp.exec_cmd("kitty fsel"))
 hl.bind(m .. " + T",            hl.dsp.exec_cmd("kitty fish"))
-hl.bind(m .. " + E",            hl.dsp.exec_cmd("dolphin"))
 hl.bind(m .. " + V",            hl.dsp.exec_cmd("kitty nvim"))
-  
+hl.bind(m .. " + SPACE",        hl.dsp.exec_cmd("tofi-drun"))
+
 hl.bind(m .. " + W",            hl.dsp.focus({ direction = "up" }))
 hl.bind(m .. " + A",            hl.dsp.focus({ direction = "left" }))
 hl.bind(m .. " + S",            hl.dsp.focus({ direction = "down" }))
