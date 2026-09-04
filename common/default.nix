@@ -93,7 +93,6 @@
 
     environment.systemPackages = with pkgs; [
         pulseaudio
-	dunst
         mpv
 	rustPlatform.rustLibSrc
         rustup
@@ -113,7 +112,6 @@
 	slurp
 	davinci-resolve
 	libnotify
-	fsel
     ];
 
 		virtualisation.virtualbox.host.enable = true;

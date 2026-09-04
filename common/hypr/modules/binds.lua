@@ -12,6 +12,11 @@ hl.bind(m .. " + A",            hl.dsp.focus({ direction = "left" }))
 hl.bind(m .. " + S",            hl.dsp.focus({ direction = "down" }))
 hl.bind(m .. " + D",            hl.dsp.focus({ direction = "right" }))
 
+hl.bind(m .. " + SHIFT + W",    hl.dsp.window.move({ direction = "up" }))
+hl.bind(m .. " + SHIFT + A",    hl.dsp.window.move({ direction = "left" }))
+hl.bind(m .. " + SHIFT + S",    hl.dsp.window.move({ direction = "down" }))
+hl.bind(m .. " + SHIFT + D",    hl.dsp.window.move({ direction = "right" }))
+
 for i = 1, 10 do
     -- Number keys: workspaces
     -- Function keys: special
@@ -28,13 +33,18 @@ for i = 1, 10 do
     end
 end
 
-hl.bind(m .. " + mouse_down",   hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(m .. " + mouse_up",     hl.dsp.focus({ workspace = "e-1" }))
+-- icl im just gonna comment these out for now bcs i've never used them to switch workspaces and the cycle next doesnt work great for em either
+--hl.bind(m .. " + mouse_down",   hl.dsp.window.cycle_next())
+--hl.bind(m .. " + mouse_up",     hl.dsp.window.cycle_next())
 
 hl.bind(m .. " + mouse:272",    hl.dsp.window.drag(), { mouse = true })
 hl.bind(m .. " + mouse:273",    hl.dsp.window.resize(), { mouse = true })
 hl.bind(m .. " + F",            hl.dsp.window.float({ action = "toggle" }))
 hl.bind(m .. " + Q",            hl.dsp.window.close())
+hl.bind(m .. " + SHIFT + Q",    hl.dsp.window.kill())
+
+hl.bind(m .. " + C",            hl.dsp.window.cycle_next({ tiled = true }))
+hl.bind(m .. " + X",            hl.dsp.window.cycle_next({ tiled = true, next = false }))
 
 hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" temp.png'))
 
