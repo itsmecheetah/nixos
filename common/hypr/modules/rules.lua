@@ -74,6 +74,12 @@ hl.window_rule({
     immediate = true,
 })
 
+hl.window_rule({
+		name = "toggleTransparency",
+		match = { tag = "non_opaque"},
+		opacity = "1.0 override 1.0 override",
+})
+
 hl.layer_rule({
     name = "quickshell-blur",
     match = { namespace = "quickshell" }, 

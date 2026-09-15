@@ -52,7 +52,20 @@
             # Add more stuff later
         };
 
-	neovim.enable = true;
+	neovim = {
+		enable = true;
+		defaultEditor = true;
+		extraConfig = "
+			set nu
+			set shiftwidth=2
+			set tabstop=2
+			set softtabstop=2
+			set cul
+			set autocomplete
+			set completeopt=fuzzy,menu,menuone,popup
+			set autocompletedelay=250
+		";
+	};
 
         obs-studio.enable = true;
         kitty = {
@@ -88,6 +101,7 @@
 
 					bye = "shutdown now";
 					z = "systemctl suspend";
+					ze = "systemctl suspend && exit";
 					};
   };
 

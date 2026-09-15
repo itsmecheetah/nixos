@@ -46,6 +46,8 @@ hl.bind(m .. " + SHIFT + Q",    hl.dsp.window.kill())
 hl.bind(m .. " + C",            hl.dsp.window.cycle_next({ tiled = true }))
 hl.bind(m .. " + X",            hl.dsp.window.cycle_next({ tiled = true, next = false }))
 
+hl.bind(m .. " + O",            hl.dsp.window.tag({ tag = "non_opaque" }))
+
 hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" temp.png'))
 
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
