@@ -11,9 +11,14 @@
       url = "github:4evy/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+		lanzaboote = {
+			url = "github:nix-community/lanzaboote/v1.1.0";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
   };
 
-  outputs = { self, nixpkgs, home-manager, nixcord, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixcord, lanzaboote, ... }@inputs: {
     packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
     packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
 
@@ -41,6 +46,7 @@
           ./common
           ./hosts/desktop
           home-manager.nixosModules.home-manager
+					inputs.lanzaboote.nixosModules.lanzaboote
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

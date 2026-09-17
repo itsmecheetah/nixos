@@ -1,8 +1,16 @@
  { config, pkgs, lib, ... }:
 
 {
-    boot.loader.systemd-boot.enable = true;
+    #boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
+		boot.loader.systemd-boot.configurationLimit = 5;
+		boot.loader.systemd-boot.enable = lib.mkForce false;
+
+		# NOTE: I should probably move this to hosts/desktop
+		boot.lanzaboote = {
+			enable = true;
+			pkiBundle = "/var/lib/sbctl";
+		};
 
     networking.networkmanager.enable = true;
     networking.nftables.enable = true;
@@ -112,6 +120,7 @@
 	slurp
 	davinci-resolve
 	libnotify
+	sbctl
     ];
 
 		virtualisation.virtualbox.host.enable = true;
