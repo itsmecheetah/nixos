@@ -131,7 +131,7 @@
     };
 
     fonts.packages = with pkgs; [
-	nerd-fonts.anonymice
+	nerd-fonts.mononoki
     ];
 
     programs.appimage = {
