@@ -1,9 +1,10 @@
-{ config, inputs, pkgs, ... }:
+{ config, inputs, pkgs, lib, ... }:
 
 {
     imports = [
     ./nixcord.nix
     ./hyprland.nix
+		./starship.nix
     ];
 
     home.username = "orangecheetah";
@@ -103,13 +104,6 @@
 					z = "systemctl suspend";
 					ze = "systemctl suspend && exit";
 					};
-  };
-
-	starship = {
-	    enable = true;
-			settings = {
-				format = "$directory$git_branch$git_status\n$character";
-      };
   };
 
 	quickshell.enable = true;
