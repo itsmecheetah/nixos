@@ -12,4 +12,5 @@
 					"$c$cpp$rust$golang$nodejs$bun$php$java$kotlin$haskell$python[](fg:#458588 bg:#555555)"
 					"$all\n$character"
 			];
+	};
 }
