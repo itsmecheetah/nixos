@@ -18,4 +18,8 @@
         nvidiaSettings = true;
         package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
+
+		xdg.configFile."hypr/hosts" = {
+			source = "./activehost.lua";
+		};		
 }
