@@ -120,6 +120,7 @@
 	davinci-resolve
 	libnotify
 	sbctl
+	hyprpicker
     ];
 
 		virtualisation.virtualbox.host.enable = true;
