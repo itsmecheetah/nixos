@@ -1,14 +1,13 @@
  { config, pkgs, lib, ... }:
 
 {
-    #boot.loader.systemd-boot.enable = true;
+    boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 		boot.loader.systemd-boot.configurationLimit = 5;
-		boot.loader.systemd-boot.enable = lib.mkForce false;
+		#boot.loader.systemd-boot.enable = lib.mkForce false;
 
-		# NOTE: I should probably move this to hosts/desktop
 		boot.lanzaboote = {
-			enable = true;
+			enable = false;
 			pkiBundle = "/var/lib/sbctl";
 		};
 
