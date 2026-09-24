@@ -6,10 +6,10 @@
 		boot.loader.systemd-boot.configurationLimit = 5;
 		#boot.loader.systemd-boot.enable = lib.mkForce false;
 
-		boot.lanzaboote = {
+		/*boot.lanzaboote = {
 			enable = false;
 			pkiBundle = "/var/lib/sbctl";
-		};
+		};*/
 
     networking.networkmanager.enable = true;
     networking.nftables.enable = true;
