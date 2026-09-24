@@ -39,7 +39,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = { inherit inputs; };
-            home-manager.users.orangecheetah = import ./common/home.nix;
+            home-manager.users.orangecheetah = import ./hosts/thinkpad/home.nix;
           }
 					nixos-hardware.nixosModules.lenovo-thinkpad-x1-9th-gen
         ];
@@ -57,7 +57,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = { inherit inputs; };
-            home-manager.users.orangecheetah = import ./common/home.nix;
+            home-manager.users.orangecheetah = import ./hosts/desktop/home.nix;
           }
         ];
       };
