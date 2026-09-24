@@ -70,6 +70,7 @@
         pulse.enable = true;
         #jack.enable = true;
     };
+		services.upower.enable = true;
 
     users.users."orangecheetah" = {
         isNormalUser = true;
