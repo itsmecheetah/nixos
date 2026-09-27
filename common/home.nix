@@ -86,7 +86,7 @@
 					rd = "sudo nixos-rebuild --flake ~/.nix#desktop";
 					rds = "sudo nixos-rebuild --flake ~/.nix#desktop switch";
 					rt = "sudo nixos-rebuild --flake ~/.nix#thinkpad";
-					rts = "sudo nixos-rebuild --flake ~/.nix#desktop switch";
+					rts = "sudo nixos-rebuild --flake ~/.nix#thinkpad switch";
 					ff = "fastfetch";
 					v = "nvim";
 

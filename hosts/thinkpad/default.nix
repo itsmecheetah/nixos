@@ -6,4 +6,8 @@
     networking.hostName = "nixos-thinkpad";
 
     services.tlp.enable = true;
+
+		environment.systemPackages = [
+			pkgs.reaper;
+		];
 }
