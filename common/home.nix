@@ -66,6 +66,9 @@
 			set completeopt=fuzzy,menu,menuone,popup
 			set autocompletedelay=250
 		";
+		plugins = with pkgs.vimPlugins; [
+			cord-nvim
+		];
 	};
 
         obs-studio.enable = true;
@@ -82,6 +85,7 @@
 	fish = {
       enable = true;
 			shellAbbrs = {
+					nox = "~/Downloads/nox-v1.3.3-linux-x86_64";
 			    l = "fsel -p";
 					rd = "sudo nixos-rebuild --flake ~/.nix#desktop";
 					rds = "sudo nixos-rebuild --flake ~/.nix#desktop switch";
@@ -118,8 +122,8 @@
 			height = "100%";
 			border-width = 0;
 			outline-width = 0;
-			padding-left = "35%";
-			padding-top = "35%";
+			padding-left = "15%";
+			padding-top = "15%";
 			result-spacing = 25;
 			num-results = 7;
 			background-color = "#000A";

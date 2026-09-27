@@ -21,9 +21,14 @@
 			url = "github:NixOS/nixos-hardware";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+
+		nox = {
+			url = "github:playfairs/nox";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
   };
 
-  outputs = { self, nixpkgs, home-manager, nixcord, lanzaboote, nixos-hardware, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixcord, lanzaboote, nixos-hardware, nox, ... }@inputs: {
     packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
     packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
 
