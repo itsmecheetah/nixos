@@ -9,7 +9,6 @@ hl.monitor({
 
 ---- PROGRAMS ----
 local terminal = "kitty fish"
-local fileManager = "dolphin" -- lol i still gotta fix this
 local menu = "hyprlauncher"
 
 ---- AUTOSTART ----

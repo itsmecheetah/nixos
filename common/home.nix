@@ -38,6 +38,7 @@
 	    "${config.home.homeDirectory}/.nix/common/snowdrop";
 
     programs = {
+				gpg.enable = true;
         git = {
             enable = true;
             userName = "itsmecheetah";
