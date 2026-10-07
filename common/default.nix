@@ -57,6 +57,11 @@
     services.gnome.gnome-keyring.enable = true;
     security.pam.services.sddm.enableGnomeKeyring = true;
 
+		services.pcscd.enable = true;
+		programs.gnupg.agent = {
+			enable = true;
+		};
+
     services.printing.enable = true;
 
     services.openssh.enable = true;
@@ -100,6 +105,7 @@
     };
 
     environment.systemPackages = with pkgs; [
+		pinentry-curses
         pulseaudio
         mpv
 	rustPlatform.rustLibSrc

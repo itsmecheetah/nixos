@@ -38,12 +38,13 @@
 	    "${config.home.homeDirectory}/.nix/common/snowdrop";
 
     programs = {
-				gpg.enable = true;
         git = {
             enable = true;
             userName = "itsmecheetah";
             userEmail = "enzoljost@gmail.com";
-            extraConfig = {
+						signing.signByDefault = true;
+						signing.key = "A84AD4ED3AD930DD";
+						extraConfig = {
                 credential.helper = "${pkgs.git-credential-manager}/bin/git-credential-manager";
                 credential.credentialStore = "secretservice";
             };
