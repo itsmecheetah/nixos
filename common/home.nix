@@ -67,9 +67,26 @@
 			set autocomplete
 			set completeopt=fuzzy,menu,menuone,popup
 		";
+		extraLuaConfig = ''
+			vim.api.nvim_create_autocmd("FileType", {
+				callback = function()
+					pcall(vim.treesitter.start)
+				end,
+			});
+		'';
 		plugins = with pkgs.vimPlugins; [
 			cord-nvim
 			roslyn-nvim
+			(nvim-treesitter.withPlugins (p: [
+				p.c_sharp
+				p.gitignore
+				p.html
+				p.rust
+			]))
+		];
+		extraPackages = [ 
+			pkgs.roslyn-ls
+			pkgs.dotnet-sdk
 		];
 	};
 
