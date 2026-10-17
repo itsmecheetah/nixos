@@ -118,6 +118,7 @@
 					cdsnowdrop = "cd ~/.nix/common/snowdrop && git status";
 					cdhypr = "cd ~/.nix/common/hypr && git status";
 					cdnix = "cd ~/.nix && git status";
+					cdpier = "cd ~/Projects/Unity/pier && git status";
 
 					gs = "git status";
 					gaa = "git add .";
