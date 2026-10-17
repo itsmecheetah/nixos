@@ -58,7 +58,7 @@
 	neovim = {
 		enable = true;
 		defaultEditor = true;
-		extraConfig = "
+		extraConfig = ''
 			set nu
 			set shiftwidth=2
 			set tabstop=2
@@ -66,7 +66,9 @@
 			set cul
 			set autocomplete
 			set completeopt=fuzzy,menu,menuone,popup
-		";
+			colorscheme habamax
+			hi Normal guibg=#14161B
+		'';
 		extraLuaConfig = ''
 			vim.api.nvim_create_autocmd("FileType", {
 				callback = function()
