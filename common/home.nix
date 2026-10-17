@@ -66,10 +66,10 @@
 			set cul
 			set autocomplete
 			set completeopt=fuzzy,menu,menuone,popup
-			set autocompletedelay=250
 		";
 		plugins = with pkgs.vimPlugins; [
 			cord-nvim
+			roslyn-nvim
 		];
 	};
 
