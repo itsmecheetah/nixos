@@ -26,9 +26,14 @@
 			url = "github:playfairs/nox";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+
+		mango = {
+			url = "github:mangowm/mango";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
   };
 
-  outputs = { self, nixpkgs, home-manager, nixcord, lanzaboote, nixos-hardware, nox, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixcord, lanzaboote, nixos-hardware, nox, mango, ... }@inputs: {
     packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
     packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
 

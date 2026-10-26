@@ -37,7 +37,7 @@
     # services.desktopManager.plasma6.enable = true;
 
     programs.hyprland = {
-        enable = true;
+        enable = false;
         xwayland.enable = true;
     };
 
@@ -97,10 +97,14 @@
 
     xdg.portal = {
 	enable = true;
-	extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+	extraPortals = [ 
+		pkgs.xdg-desktop-portal-hyprland
+		pkgs.xdg-desktop-portal-wlr 
+	];
 	config = {
-	     common.default = [ "hyprland" "gtk" ];
+	     common.default = [ "gtk" ];
 	     hyprland.default = [ "hyprland" "gtk" ];
+			 mango.default = [ "wlr" "gtk" ];
 	};
     };
 

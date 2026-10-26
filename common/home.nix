@@ -5,6 +5,7 @@
     ./nixcord.nix
     ./hyprland.nix
 		./starship.nix
+		./mango.nix
     ];
 
     home.username = "orangecheetah";
@@ -26,9 +27,10 @@
 
     services.hyprpolkitagent.enable = true;
     services.awww.enable = true;
+		services.cliphist.enable = true;
 
     wayland.windowManager.hyprland = {
-        enable = true;
+        enable = false;
         package = null;
         portalPackage = null;
     };
