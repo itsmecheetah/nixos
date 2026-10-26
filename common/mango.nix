@@ -8,12 +8,18 @@
 		enable = true;
 		settings = {
 			bind = [
+				# mango
 				"SUPER,r,reload_config"
-				"SUPER,t,spawn,kitty fish"
+
+				# window management
 				"SUPER,q,killclient"
 				"SUPER,c,zoom"
-				"SUPER,space,spawn,tofi-drun"
 
+				# applications
+				"SUPER,space,spawn,tofi-drun"
+				"SUPER,t,spawn,kitty fish"
+
+				# movement
 				"SUPER,a,focusdir,left"
 				"SUPER,d,focusdir,right"
 				"SUPER,w,focusdir,up"
