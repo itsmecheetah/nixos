@@ -132,6 +132,8 @@
 	libnotify
 	sbctl
 	hyprpicker
+	xdg-desktop-portal
+	xdg-desktop-portal-wlr
     ];
 
 		virtualisation.virtualbox.host.enable = true;

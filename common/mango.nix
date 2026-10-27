@@ -17,19 +17,21 @@
 				"SUPER,e,togglemaximizescreen"
 				"SUPER,F11,togglefullscreen"
 				"SUPER,v,toggle_scratchpad"
-				"ALT,tab,overcircle"
+				"SUPER,space,overcircle"
+				"SUPER,c,overcircle,next"
 
 				# layouts
 				"SUPER,F1,setlayout,scroller"
 				"SUPER,F2,setlayout,fair"
 				"SUPER,F3,setlayout,tile"
 				"SUPER,F4,setlayout,monocle"
-				"SUPER,c,switch_layout"
+				"SUPER,F5,switch_layout"
 
 				# applications
-				"SUPER,space,spawn,tofi-drun"
+				"SUPER,g,spawn,tofi-drun"
 				"SUPER,t,spawn,kitty fish"
 				"SUPER,r,toggle_named_scratchpad,discord,none,discord"
+				"SUPER+SHIFT,r,toggle_named_scratchpad,steam,none,steam"
 
 				# tags
 				"SUPER,0,view,0"
@@ -75,6 +77,7 @@
 			];
 			window_rule = [
 				"is_named_scratchpad:1,app_id:discord"
+				"is_named_scratchpad:1,app_id:steam"
 			];
 		};
 	};
