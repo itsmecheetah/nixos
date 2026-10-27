@@ -17,7 +17,7 @@
 				"SUPER,e,togglemaximizescreen"
 				"SUPER,F11,togglefullscreen"
 				"SUPER,v,toggle_scratchpad"
-				"ALT,tab,switcher"
+				"ALT,tab,overcircle"
 
 				# layouts
 				"SUPER,F1,setlayout,scroller"
@@ -32,16 +32,16 @@
 				"SUPER,r,toggle_named_scratchpad,discord,none,discord"
 
 				# tags
-				"SUPER,0,toggleview,0"
-				"SUPER,1,toggleview,1"
-				"SUPER,2,toggleview,2"
-				"SUPER,3,toggleview,3"
-				"SUPER,4,toggleview,4"
-				"SUPER,5,toggleview,5"
-				"SUPER,6,toggleview,6"
-				"SUPER,7,toggleview,7"
-				"SUPER,8,toggleview,8"
-				"SUPER,9,toggleview,9"
+				"SUPER,0,view,0"
+				"SUPER,1,view,1"
+				"SUPER,2,view,2"
+				"SUPER,3,view,3"
+				"SUPER,4,view,4"
+				"SUPER,5,view,5"
+				"SUPER,6,view,6"
+				"SUPER,7,view,7"
+				"SUPER,8,view,8"
+				"SUPER,9,view,9"
 				"SUPER,x,view,00"
 
 				"SUPER+SHIFT,0,toggletag,0"
@@ -54,7 +54,6 @@
 				"SUPER+SHIFT,7,toggletag,7"
 				"SUPER+SHIFT,8,toggletag,8"
 				"SUPER+SHIFT,9,toggletag,9"
-
 
 				# movement
 				"SUPER,w,focusdir,up"
