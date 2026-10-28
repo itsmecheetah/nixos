@@ -8,6 +8,9 @@
 		enable = true;
 		settings = {
 			bind = [
+				# mango
+				"SUPER+SHIFT+CTRL+ALT,backspace,quit"
+
 				# window management
 				"SUPER+SHIFT,q,restore_minimized"
 				"SUPER,q,minimized"
