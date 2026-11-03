@@ -77,6 +77,15 @@
 					pcall(vim.treesitter.start)
 				end,
 			});
+
+			vim.lsp.config("roslyn", {
+				cmd = {
+					"Microsoft.CodeAnalysis.LanguageServer",
+					"--stdio",
+					"--clientProcessId", tostring(vim.uv.os_getpid()),
+					"--extensionLogDirectory", vim.fs.joinpath(vim.fn.stdpath("log"), "roslyn"),
+				},
+			});
 		'';
 		plugins = with pkgs.vimPlugins; [
 			cord-nvim
