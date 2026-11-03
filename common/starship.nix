@@ -39,6 +39,14 @@
 				format = "[ as 󰓠 ]($style)";
 				style = "bg:#886a45 fg:#282828";
 			};
+
+			rust = {
+				disabled = true;
+			};
+
+			package = {
+				disabled = true;
+			};
 		};
 	};
 }
