@@ -42,15 +42,17 @@
     programs = {
         git = {
             enable = true;
-            userName = "itsmecheetah";
-            userEmail = "enzoljost@gmail.com";
+						settings = {
+							credential.helper = "${pkgs.git-credential-manager}/bin/git-credential-manager";
+							credential.credentialStore = "secretservice";
+							user = {
+								name = "itsmecheetah";
+								email = "enzoljost@gmail.com";
+							};
+						};
 						signing.signByDefault = true;
 						signing.key = "A84AD4ED3AD930DD";
-						extraConfig = {
-                credential.helper = "${pkgs.git-credential-manager}/bin/git-credential-manager";
-                credential.credentialStore = "secretservice";
-            };
-        };
+					};
 
         fastfetch = {
             enable = true;
@@ -170,5 +172,9 @@
 			drun-launch = true;
 		};
 	};
-    };
+
+	concord = {
+		enable = true;
+	};
+};
 }
