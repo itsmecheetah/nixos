@@ -118,13 +118,14 @@
       enable = true;
 			shellAbbrs = {
 					nox = "~/Downloads/nox-v1.3.3-linux-x86_64";
-			    l = "fsel -p";
+			    # l = "fsel -p";
 					rd = "sudo nixos-rebuild --flake ~/.nix#desktop";
 					rds = "sudo nixos-rebuild --flake ~/.nix#desktop switch";
 					rt = "sudo nixos-rebuild --flake ~/.nix#thinkpad";
 					rts = "sudo nixos-rebuild --flake ~/.nix#thinkpad switch";
+
 					ff = "fastfetch";
-					v = "nvim";
+					v = "nvim .";
 
 					cdsnowdrop = "cd ~/.nix/common/snowdrop && git status";
 					cdhypr = "cd ~/.nix/common/hypr && git status";
@@ -137,9 +138,11 @@
 					gps = "git push";
 					gpl = "git pull";
 					gc = "git commit";
+					gcn = "git commit --no-gpg-sign";
 					gd = "git diff";
 
 					bye = "shutdown now";
+					brb = "shutdown now -r";
 					z = "systemctl suspend";
 					ze = "systemctl suspend && exit";
 					};
