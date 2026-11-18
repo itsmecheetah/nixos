@@ -34,7 +34,8 @@
 				"SUPER,g,spawn,tofi-drun"
 				"SUPER,t,spawn,kitty fish"
 				"SUPER,r,toggle_named_scratchpad,discord,none,discord"
-				"SUPER+SHIFT,r,toggle_named_scratchpad,steam,none,steam"
+				#"SUPER+SHIFT,r,toggle_named_scratchpad,steam,none,steam"
+				''NONE,Print,spawn,grim -g "$(slurp)" temp.png''
 
 				# tags
 				"SUPER,0,view,0"
@@ -79,8 +80,8 @@
 				"grid,deck,dwindle"
 			];
 			window_rule = [
-				"is_named_scratchpad:1,app_id:discord"
-				"is_named_scratchpad:1,app_id:steam"
+				"is_named_scratchpad:1,app_id:concord"
+				#"is_named_scratchpad:1,app_id:steam"
 			];
 		};
 	};

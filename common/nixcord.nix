@@ -5,7 +5,7 @@
 
   programs.nixcord = {
     enable = true;
-    discord.vencord.enable = true;
+    discord.vencord.enable = false;
     config.plugins = {
       betterFolders = {
         enable = true;

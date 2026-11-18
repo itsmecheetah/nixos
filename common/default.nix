@@ -42,6 +42,8 @@
     };
 
 		programs.xwayland.enable = true;
+		
+		programs.nix-ld.enable = true;
 
     services.keyd = {
         enable = true;
@@ -98,19 +100,25 @@
     programs.gamescope.enable = true;
 
     xdg.portal = {
-	enable = true;
-	extraPortals = [ 
-		#pkgs.xdg-desktop-portal-hyprland
-		pkgs.xdg-desktop-portal-wlr 
-	];
-	config = {
-	     common.default = [ "gtk" ];
-	     hyprland.default = [ "hyprland" "gtk" ];
-			 mango.default = [ "wlr" "gtk" ];
-	};
+			enable = true;
+			wlr.enable = true;
+			wlr.settings.screencast = {
+				chooser_type = "dmenu";
+				chooser_cmd = ''${pkgs.tofi}/bin/tofi --prompt-text="Share screen: "'';
+			};
+			extraPortals = [ 
+				#pkgs.xdg-desktop-portal-hyprland
+				pkgs.xdg-desktop-portal-gtk
+			];
+			config = {
+				common.default = [ "gtk" ];
+				hyprland.default = [ "hyprland" "gtk" ];
+				mango.default = [ "wlr" "gtk" ];
+			};
     };
 
     environment.systemPackages = with pkgs; [
+		nuget
 		pinentry-curses
         pulseaudio
         mpv
@@ -136,6 +144,12 @@
 	hyprpicker
 	xdg-desktop-portal
 	xdg-desktop-portal-wlr
+			(with dotnetCorePackages; combinePackages [
+				sdk_8_0
+				sdk_9_0
+				sdk_10_0
+				sdk_11_0
+			])
     ];
 
 		virtualisation.virtualbox.host.enable = true;
@@ -147,6 +161,7 @@
 
     fonts.packages = with pkgs; [
 	nerd-fonts.mononoki
+	noto-fonts-color-emoji
     ];
 
     programs.appimage = {

@@ -19,8 +19,7 @@
 	clang
         pkg-config
         unityhub
-        git-credential-manager
-        dotnet-sdk
+        git-credential-manager	
         mono
         prismlauncher
     ];
@@ -68,7 +67,6 @@
 			set tabstop=2
 			set softtabstop=2
 			set cul
-			set autocomplete
 			set completeopt=fuzzy,menu,menuone,popup
 			colorscheme habamax
 			hi Normal guibg=#14161B
@@ -88,10 +86,13 @@
 					"--extensionLogDirectory", vim.fs.joinpath(vim.fn.stdpath("log"), "roslyn"),
 				},
 			});
+
+			require("blink.cmp").setup({});
 		'';
 		plugins = with pkgs.vimPlugins; [
 			cord-nvim
 			roslyn-nvim
+			blink-cmp
 			(nvim-treesitter.withPlugins (p: [
 				p.c_sharp
 				p.gitignore
